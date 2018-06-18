@@ -90,7 +90,7 @@ class TasksController extends Controller
         
     
         }else {
-            return redirect()->back();
+           return redirect('/');
         }
 
     }
@@ -113,7 +113,7 @@ class TasksController extends Controller
         
     
         }else {
-            return redirect()->back();
+            return redirect('/');
         }
 
     }
