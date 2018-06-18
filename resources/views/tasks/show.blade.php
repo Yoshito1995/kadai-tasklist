@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h1>id = {{ $task->id }} のタスク詳細ページ</h1>
+    <h1>id = {{ $task->user_id }} のタスク詳細ページ</h1>
     
     <table class="table table-bordered">
         <tr>
@@ -20,7 +20,7 @@
 
         {!! link_to_route('tasks.edit', 'このタスクを編集', ['id' => $task->id], ['class' => 'btn btn-default']) !!}
         
-     {!! Form::model($task, ['route' => ['tasks.destroy', $task->id], 'method' => 'delete']) !!}
+     {!! Form::model($task, ['route' => ['tasks.destroy', $task->user_id], 'method' => 'delete']) !!}
         {!! Form::submit('削除', ['class' => 'btn btn-danger']) !!}
     {!! Form::close() !!}
 
